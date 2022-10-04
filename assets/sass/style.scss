@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+    
+    @media (max-width: 640px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 320px) {
+        padding: 0 10px;
+    }
+}
+.btn {
+    display: block;
+    text-decoration: none;
+}
+
+@import 'mixins.scss';
+@import 'header.scss';
+@import 'main.scss';
+@import 'backstage.scss';
+@import 'pets.scss';
+@import 'pick.scss';
+@import 'donate.scss';
+@import 'footer.scss';
+@import 'testimonials.scss'
+

@@ -1,0 +1,110 @@
+@import 'mixins.scss';
+
+.header {
+    @include header-footer;
+    padding: 14px 0;
+    position: relative;
+    z-index: 5;
+    @media (max-width: 640px) {
+        padding: 4px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        display: block;
+
+        @media (max-width: 640px) {
+            display: none;
+        }
+
+        &_small {
+            display: none;
+            @media (max-width: 640px) {
+                display: block;
+            }
+        }
+    }
+
+    &__menu {
+        display: block;
+        padding: 0 0 0 63px;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    &__list {
+        display: flex;
+
+        li {
+            padding-right: 58px;
+            &:last-child {
+                padding-right: 0;
+            }
+            @media (max-width: 1000px) {
+                padding-right: 48px;
+            }
+            @media (max-width: 860px) {
+                padding-right: 30px;
+            }
+        }
+    }
+    &__link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FFFFFF;
+
+        text-decoration: none;
+        transition: 0.4s all;
+
+        &:hover {
+            color: rgba(249, 128, 75, 1);
+        }
+
+        &-active {
+            color: rgba(249, 128, 75, 1);
+            cursor: default;
+        }
+    }
+
+    &__descr {
+        display: block;
+        a {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: #FFFFFF;
+    
+            text-decoration: none;
+            transition: 0.4s all;
+    
+            &:hover {
+                color: rgba(249, 128, 75, 1);
+            }
+        }
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+    
+    &__burger {
+        display: none;
+
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+}

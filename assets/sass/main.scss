@@ -1,0 +1,193 @@
+.main {
+    max-width: 1600px;
+    margin: -0.5px auto 0;
+    height: 700px;
+    background: url('../../assets/images/main__panda.jpg') center bottom no-repeat;
+
+    @media (max-width: 1000px){
+        height: 504px;
+        margin: 0 auto 0;
+        background: url('../../assets/images/main__panda-1000.jpg') center bottom no-repeat;
+    }
+    @media (max-width: 960px) {
+        height: 500px;
+    }
+    @media (max-width: 640px){
+        height: 339px;
+        background: url('../../assets/images/main__panda-640.jpg') center bottom no-repeat;
+    }
+    @media (max-width: 320px){
+        height: 186.96px;
+        background: url('../../assets/images/main__panda-320.jpg') center bottom no-repeat;
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: 86px;
+        right: 30px;
+        max-width: 500px;
+        text-align: center;
+
+        @media (max-width: 1240px) {
+            top: 66px;
+            right: 55px;
+        }
+
+        @media (max-width: 1000px) {
+            top: 43px;
+            right: 36px;
+        }
+        @media (max-width: 960px) {
+            top: 86px;
+            right: 112px;
+            max-width: 255.64px;
+        }
+        @media (max-width: 640px) {
+            max-width: 255.64px;
+            top: 49px;
+            right: 16px;
+        }
+        @media (max-width: 320px) {
+            max-width: 128.13px;
+            top: 41px;
+            right: 10px;
+        }
+    }
+    &__circle {
+        position: absolute;
+        top: -73px;
+        right: 108px;
+        z-index: 1;
+        width: 465px;
+        height: 465px;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        border-radius: 50%;
+
+        @media (max-width: 1240px) {
+            top: -73px;
+            right: 104px;
+            width: 400px;
+            height: 400px;
+        }
+        @media (max-width: 1000px) {
+            top: -54px;
+            right: 141px;
+            width: 367px;
+            height: 367px;
+        }
+        @media (max-width: 960px) {
+            right: 53px;
+            width: 237.6px;
+            height: 237.6px;
+        }
+        @media (max-width: 640px) {
+            width: 237.6px;
+            height: 237.6px;
+            top: -39px;
+             right: 55px;
+        }
+        @media (max-width: 320px) {
+            width: 119.09px;
+            height: 119.09px;
+            top: -18px;
+            right: 28px;
+        }
+    }
+    &__wrapper-content {
+        position: relative;
+        z-index: 2;
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 106.496px;
+        line-height: 75%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        span {
+            color: #FFEE2E;
+        }
+        @media (max-width: 1240px) {
+            font-size: 92.496px;
+        }
+        @media (max-width: 1000px) {
+            font-size: 85px;
+        }
+        @media (max-width: 960px) {
+            font-size: 54.2894px;
+        }
+        @media (max-width: 320px) {
+            font-size: 28px;
+        }
+    }
+    &__button {
+        width: 298px;
+        padding: 16px 0;
+        margin: 60px auto 0;
+        background: #fc882f;
+        border-radius: 25px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+
+        transition: 0.3s all;
+
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+
+        @media (max-width: 1000px) {
+            margin: 41px auto 0;
+        }
+        @media (max-width: 960px) {
+            width: 255.64px;
+        }
+        @media (max-width: 640px) {
+            display: none;
+        }
+    }
+    &__button-768 {
+        display: none;
+
+        @media (max-width: 640px) {
+            display: block;
+            width: 298px;
+            padding: 16px 0;
+            position: absolute;
+            top: 244px;
+            
+            border-radius: 25px;
+    
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            text-align: center;
+            color: #FFFFFF;
+            background: #fc882f;
+            transition: 0.3s all;
+    
+            &:hover {
+                background: #E47209;
+            }
+            &:active {
+                background: #4B9200;
+            }
+    
+        }
+
+        @media (max-width: 320px) {
+            top: 207px;
+        }
+
+    }
+}

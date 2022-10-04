@@ -1,0 +1,413 @@
+$roboto: 'Roboto', sans-serif;
+.pets {
+    padding: 85px 0 101px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+
+    &__slider {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+    }
+    &__item {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #FE9013;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: 0.7s all;
+        height: 426px;
+        z-index: 1;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover .pets__item-img{
+            transform: scale(1.1)
+        }
+        &:hover .pets__item-content{
+            bottom: 35px;
+            
+        }
+        &:hover .pets__item-header{
+            color: white;
+        }
+        &:hover .pets__item-text>p{
+            color: white;
+        }
+        &:hover .pets__wrapper{
+            display: block;
+            transition: 0.9s all;
+        }
+        &-img {
+            position: absolute;
+            border-top: 5px;
+            transition: 0.9s all;
+        }
+        &-content {
+            transition: 0.7s all;
+            position: absolute;
+            bottom: -5px;
+            padding: 8px 8px 14px 16px;
+            display: flex;
+            justify-content: space-between;
+            width: 338px;
+            
+            z-index: 10;
+        }
+        &-text {
+            p {
+                font-family: $roboto;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 120%;
+                color: #000000;
+            }
+        }
+        &-header {
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: #000000;
+            transition: 0.5s all;
+        }
+    }
+
+    &__btn {
+        background: #FE9013;
+        border-radius: 25px;
+        padding: 16px 0;
+        width: 298px;
+        text-align: center;
+        margin: 80px auto 0;
+
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FFFFFF;
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+    }
+    &__wrapper {
+        transition: 0.9s all;
+        display: none;
+        position: absolute;
+        background: rgb(0 0 0 / 46%);
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        transition: 0.9s all;
+    }
+    .left-btn {
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        text-align: center;
+        top: 489px;
+        left: 139px;
+        padding: 27px 0 0 0;
+        box-sizing: border-box;
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+    }
+    .right-btn {
+        position: absolute;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        text-align: center;
+        top: 489px;
+        right: 139px;
+        padding: 27px 0 0 0;
+        box-sizing: border-box;
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+    }
+    .pets-left-flower {
+        position: absolute;
+        bottom: 0;
+    }
+    .pets-rigth-flower {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+.pick {
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    opacity: 0.9;
+    padding: 69px 0 100px;
+
+    &__content {
+        padding: 41px 0 59px;
+        background: rgba(253, 253, 255, 0.52);
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
+        h2 {
+            text-align: center;
+            color: #FE9013;
+        }
+        p:nth-child(3){
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: #333B41;
+            padding: 0 0 10px 99px;
+        }
+        p:nth-child(4){
+            padding: 0 0 0 99px;
+            max-width: 863px;
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 130%;
+            color: #333B41; 
+            a {
+                color: #333B41;
+                text-decoration: none;
+                border-bottom: 1px solid #FE9013;
+                &:hover{
+                    color: #FE9013;
+                }
+            }
+        }
+    }
+    &__subheader {
+        padding: 30px 0 40px 99px;
+    }
+    &__h4 {
+        font-family: $roboto;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        color: #333B41;
+        text-align: center;
+        padding: 62px 0 40px 0;
+    }
+
+    &__btn {
+        text-decoration: none;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        border-radius: 25px;
+        width: 298px;
+        text-align: center;
+        padding: 16px 0;
+        margin: 60px auto 0;
+
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FFFFFF;
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+    }
+
+    &__steps {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-column-gap: 30px;
+        justify-content: center;
+    }
+    .pick__item {
+        width: 168px;
+        box-sizing:border-box;
+        div {
+            width: 100%;
+            height: 168px;
+            background-color: white;
+            border-radius: 5px;
+            box-sizing:border-box;
+            border: 1px solid #E47209;
+            position: relative;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        p {
+            padding: 30px 0 0 0;
+            font-family: $roboto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #333B41;
+        }
+    }
+    .pets-arrow {
+        padding: 61px 0 0 0;
+    }
+
+}
+
+.testimonials {
+    padding: 140px 0 178px;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    .testimonials_flower {
+        position: absolute;
+        bottom: -133;
+        right: 0;
+    }
+    h4 {
+        text-align: center;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        color: #333B41;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+        padding: 48px 0 0 0;
+
+    }
+    &__item {
+        box-sizing:border-box;
+        
+        max-width: 268px;
+        background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+        border-radius: 20px;
+        padding: 2px;
+
+        .wrapper {
+            box-sizing:border-box;
+           background-color: #F1F3F2;
+           border-radius: 20px;
+           width: 264px;
+           height: 387px;
+           padding: 13px 13px 0px 14px;
+        }
+
+        &_header-block {
+            display: flex;
+            padding: 0 0 10px 0;
+        }
+        &_text-block {
+            padding: 0 0 0 10px;
+        }
+    }
+
+    &__subheader {
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #000000;
+    }
+    &__header-text {
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #BDBDBD;
+        span:first-child {
+            padding: 0 3px 0 0;
+        }
+        span:last-child {
+            padding: 0 0 0 3px;
+        }
+    }
+    &__text {
+        height: 309px;
+        overflow: hidden;
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 120%;
+        color: #767474;
+    }
+    &__progress-bar {
+        padding: 0.5px;
+        margin: 21px auto 31px;
+         width: 599px;
+         height: 8px;
+         border-radius: 5px;
+         transition: 0.5s all;
+        background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+        &:hover {
+            transition: 0.7s all;
+            cursor: pointer;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    
+    }
+
+    &__progress-bar_wrapper {
+        width: 100%;
+        height: 7px;
+        background: #F5F7F6;
+        border-radius: 5px;
+        div {
+            width: 115.19px;
+            height: 7px;
+            background: #FE9013;
+            border-radius: 5px;
+        }
+    }
+
+    &__btn {
+        font-family: $roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 16px 0;
+        width: 298px;
+        background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+        border-radius: 5px;
+
+        &:hover {
+            background: #E47209;
+        }
+        &:active {
+            background: #4B9200;
+        }
+    }
+}
